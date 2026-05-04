@@ -1,5 +1,3 @@
-print("hello world")
-
 """
 Docstring for Lab15_xenzonz-1.py
 i. Lab 15: Plot a Math Formula
@@ -12,12 +10,11 @@ v. 5/3/2026
 import math
 import matplotlib.pyplot as plt
 
-
 def spiral_data():
     x_values = []
     y_values = []
 
-    for degrees in range(0, 360):
+    for degrees in range(0, 1440):
         radians = math.radians(degrees)
         radius = degrees / 360
 
@@ -29,11 +26,15 @@ def spiral_data():
     
     return x_values, y_values
 
-        
-
 def create_spiral(x_values, y_values):
-    plt.plot(x_values, y_values)
-    plt.savefig("spiralplot.png")
+    plt.plot(x_values, y_values, color="red")
+    
+    plt.title("spiral graph")
+    plt.xlabel("x values")
+    plt.ylabel("y values")
+    plt.grid(True)
+
+    plt.savefig("spiral_plot.png")
     plt.show
 
 def main():
