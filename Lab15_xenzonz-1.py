@@ -27,11 +27,13 @@ def spiral_data():
     return x_values, y_values
 
 def create_spiral(x_values, y_values):
-    plt.plot(x_values, y_values, color="red")
+    plt.style.use("bmh")
+
+    plt.plot(x_values, y_values, color="red", linestyle="dashdot", linewidth=3)
     
-    plt.title("spiral graph")
-    plt.xlabel("x values")
-    plt.ylabel("y values")
+    plt.title("Spiral Graph")
+    plt.xlabel("X Values")
+    plt.ylabel("Y Values")
     plt.grid(True)
 
     plt.savefig("spiral_plot.png")
